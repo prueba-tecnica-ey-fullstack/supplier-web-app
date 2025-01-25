@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #0056D2;
+  --color-secondary: #6C757D;
+  --color-success: #28A745;
+  --color-danger: #DC3545;
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  background: #f9f9f9;
+  font-size: 14px;
+  position: relative;
+}
+
+.container {
+  @apply max-w-[90%] mx-auto;
+}
