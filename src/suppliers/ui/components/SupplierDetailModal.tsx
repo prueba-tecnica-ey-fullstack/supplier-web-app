@@ -1,3 +1,4 @@
+import CrossIcon from '@/common/ui/assets/icons/CrossIcon'
 import Modal from '@/common/ui/components/utils/Modal'
 import { Supplier } from '@/suppliers/domain/supplier.interface'
 
@@ -10,6 +11,10 @@ interface SupplierDetailModalProps {
 const SupplierDetailModal: React.FC<SupplierDetailModalProps> = ({ isOpen, onClose, supplier }) => {
   return (
     <Modal isOpen={isOpen} onClose={onClose}>
+      <CrossIcon
+        className='size-6 text-danger absolute right-5 cursor-pointer'
+        onClick={onClose}
+      />
       <div className="space-y-6">
         <div className="text-center">
           <h4 className="text-xl font-bold text-gray-800 uppercase">Detalle del Proveedor</h4>
