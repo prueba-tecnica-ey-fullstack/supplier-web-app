@@ -2,7 +2,8 @@ import EditIcon from '@/common/ui/assets/icons/EditIcon'
 import EyeIcon from '@/common/ui/assets/icons/EyeIcon'
 import RemoveIcon from '@/common/ui/assets/icons/RemoveIcon'
 import SearchIcon from '@/common/ui/assets/icons/SearchIcon'
-import { Supplier, TableColumns } from '@/suppliers/domain/supplier.interface'
+import { TableColumns } from '@/suppliers/domain/supplier.columns'
+import { Supplier } from '@/suppliers/domain/supplier.interface'
 
 interface SupplierTableRowProps {
   supplier: Supplier

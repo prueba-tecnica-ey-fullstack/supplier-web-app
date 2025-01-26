@@ -1,4 +1,4 @@
-import { TableColumns } from '@/suppliers/domain/supplier.interface'
+import { TableColumns } from '@/suppliers/domain/supplier.columns'
 import { useEffect, useState } from 'react'
 import { useSearchParams } from 'react-router-dom'
 
