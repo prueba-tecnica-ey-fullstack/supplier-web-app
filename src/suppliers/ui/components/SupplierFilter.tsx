@@ -1,5 +1,5 @@
 import CrossIcon from '@/common/ui/assets/icons/CrossIcon'
-import { TableColumns } from '@/suppliers/types'
+import { TableColumns } from '@/suppliers/domain/supplier.interface'
 import { useSearchParams } from 'react-router-dom'
 
 
