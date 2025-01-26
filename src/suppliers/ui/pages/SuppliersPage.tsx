@@ -9,30 +9,34 @@ import { Toaster } from 'sonner'
 import DeleteSupplierModal from '../components/DeleteSupplierModal'
 import SupplierFilter from '../components/SupplierFilter'
 import SupplierDetailModal from '../components/SupplierDetailModal'
+import ScreeningModal from '../components/ScreeningModal'
 
 const SuppliersPage: React.FC = () => {
   const [showSupplierForm, toggleShowSupplierForm] = useBooleanState()
   const [showDeleteModal, toggleShowDeleteModal] = useBooleanState()
   const [showDetailModal, toggleShowDetailModal] = useBooleanState()
+  const [showScreeningModal, toggleShowScreeningModal] = useBooleanState()
 
   const [selectedSupplier, setSelectedSupplier] = useState<Supplier | null>(null)
 
 
-  const handleClose = (action: 'form' | 'remove' | 'detail') => () => {
+  const handleClose = (action: 'form' | 'remove' | 'detail' | 'screening') => () => {
     setSelectedSupplier(null)
 
     if (action === 'form') toggleShowSupplierForm()
     if (action === 'remove') toggleShowDeleteModal()
     if (action === 'detail') toggleShowDetailModal()
+      if (action === 'screening') toggleShowScreeningModal()
   }
 
-  const handleSelectSupplier = (action: 'edit' | 'remove' | 'detail', supplier: Supplier) => {
+  const handleSelectSupplier = (action: 'edit' | 'remove' | 'detail' | 'screening', supplier: Supplier) => {
 
     setSelectedSupplier(supplier)
 
     if (action === 'edit') toggleShowSupplierForm()
     if (action === 'remove') toggleShowDeleteModal()
     if (action === 'detail') toggleShowDetailModal()
+    if (action === 'screening') toggleShowScreeningModal()
   }
 
   return (
@@ -65,6 +69,12 @@ const SuppliersPage: React.FC = () => {
       <SupplierDetailModal
         isOpen={showDetailModal}
         onClose={handleClose('detail')}
+        supplier={selectedSupplier}
+      />
+
+      <ScreeningModal
+        isOpen={showScreeningModal}
+        onClose={handleClose('screening')}
         supplier={selectedSupplier}
       />
 

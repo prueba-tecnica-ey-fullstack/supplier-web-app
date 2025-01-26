@@ -2,12 +2,11 @@ import EditIcon from '@/common/ui/assets/icons/EditIcon'
 import EyeIcon from '@/common/ui/assets/icons/EyeIcon'
 import RemoveIcon from '@/common/ui/assets/icons/RemoveIcon'
 import SearchIcon from '@/common/ui/assets/icons/SearchIcon'
-import { Supplier } from '@/suppliers/domain/supplier.interface'
-import { TableColumns } from '@/suppliers/types'
+import { Supplier, TableColumns } from '@/suppliers/domain/supplier.interface'
 
 interface SupplierTableRowProps {
   supplier: Supplier
-  onSelectSupplier: (action: 'edit' | 'remove' | 'detail', supplier: Supplier) => void
+  onSelectSupplier: (action: 'edit' | 'remove' | 'detail' | 'screening', supplier: Supplier) => void
 }
 
 const SupplierTableRow: React.FC<SupplierTableRowProps> = ({ supplier, onSelectSupplier }) => {
@@ -52,7 +51,11 @@ const SupplierTableRow: React.FC<SupplierTableRowProps> = ({ supplier, onSelectS
           />
           <SearchIcon
             title='Screening'
-            className='size-5 cursor-pointer hover:text-success' />
+            className='size-5 cursor-pointer hover:text-success'
+            onClick={() => {
+              onSelectSupplier('screening', supplier)
+            }}
+          />
         </div>
       </td>
     </tr>

@@ -4,7 +4,7 @@ import SupplierTableRow from './SupplierTableRow'
 import { Supplier } from '@/suppliers/domain/supplier.interface'
 
 interface SuppliersTableProps {
-  onSelectSupplier: (action: 'edit' | 'remove' | 'detail', supplier: Supplier) => void
+  onSelectSupplier: (action: 'edit' | 'remove' | 'detail' | 'screening', supplier: Supplier) => void
 }
 
 

@@ -7,3 +7,16 @@ export interface Column {
   render?: (proceeding: Supplier) => string
   filterable: boolean
 }
+
+export interface ScreeningResponse {
+  hits: number
+  results: Array<{
+    id: number,
+    firmName: string
+    address: string
+    country: string
+    fromDate: string
+    toDate: string
+    grounds: string
+  }>
+}
