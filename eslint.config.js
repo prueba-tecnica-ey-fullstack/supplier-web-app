@@ -35,6 +35,7 @@ export default tseslint.config(
         },
       ],
       'comma-dangle': ['error', 'never'],
+      'react-hooks/exhaustive-deps': 'off'
     },
   },
 )

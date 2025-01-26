@@ -1,5 +1,6 @@
 import { AppServices } from '../../common/service/api.service'
 import { Supplier, SupplierDto } from '../domain/supplier.interface'
+import { FindAllSupplierResponse } from '../types'
 
 export class SupplierService extends AppServices {
   constructor() {
@@ -7,8 +8,7 @@ export class SupplierService extends AppServices {
   }
 
   async findAll(params: string) {
-    console.log(params)
-    return await this.get<Supplier[]>(`?${params}`)
+    return await this.get<FindAllSupplierResponse>(`?${params}`)
   }
 
   async update(supplier: SupplierDto) {

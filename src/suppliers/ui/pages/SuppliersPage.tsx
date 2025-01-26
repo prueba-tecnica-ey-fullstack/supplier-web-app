@@ -10,6 +10,7 @@ import DeleteSupplierModal from '../components/DeleteSupplierModal'
 import SupplierFilter from '../components/SupplierFilter'
 import SupplierDetailModal from '../components/SupplierDetailModal'
 import ScreeningModal from '../components/ScreeningModal'
+import SupplierPagination from '../components/table/SupplierPagination'
 
 const SuppliersPage: React.FC = () => {
   const [showSupplierForm, toggleShowSupplierForm] = useBooleanState()
@@ -52,6 +53,7 @@ const SuppliersPage: React.FC = () => {
 
         <SupplierFilter></SupplierFilter>
         <SuppliersTable onSelectSupplier={handleSelectSupplier} />
+        <SupplierPagination></SupplierPagination>
       </main>
 
       <SupplierForm

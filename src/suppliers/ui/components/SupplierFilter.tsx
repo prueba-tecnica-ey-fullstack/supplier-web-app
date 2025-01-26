@@ -2,6 +2,7 @@ import CrossIcon from '@/common/ui/assets/icons/CrossIcon'
 import { TableColumns } from '@/suppliers/domain/supplier.columns'
 import { useSearchParams } from 'react-router-dom'
 
+const hiddenSearchKeys = ['sort', 'order', 'page', 'pageSize']
 
 const SupplierFilter: React.FC = () => {
   const [searchParams, setSearchParams] = useSearchParams()
@@ -9,7 +10,7 @@ const SupplierFilter: React.FC = () => {
   const columnsFiltered = TableColumns.filter(column => (column.filterable))
 
   const actualParams = Array.from(searchParams.entries())
-    .filter(([key]) => key !== 'sort' && key !== 'order')
+    .filter(([key]) => !hiddenSearchKeys.includes(key))
 
   const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()

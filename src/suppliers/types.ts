@@ -9,6 +9,14 @@ export interface Column {
   filterable: boolean
 }
 
+export interface FindAllSupplierResponse {
+  page: number
+  pageSize: number
+  firstPage: number
+  lastPage: number
+  data: Supplier[]
+}
+
 export interface ScreeningResponse {
   hits: number
   results: Array<{
