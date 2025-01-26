@@ -45,8 +45,8 @@ const SuppliersPage: React.FC = () => {
       <Header></Header>
 
       <main className='container'>
-        <div className='flex justify-between items-center'>
-          <h1 className='mt-4 mb-2 text-xl uppercase'>Proveedores</h1>
+        <div className='mb-4 md:mb-0 md:flex justify-between items-center'>
+          <h1 className='mb-2 mt-4 md:mb-2 text-xl uppercase'>Proveedores</h1>
 
           <Button color='primary' onClick={toggleShowSupplierForm}>Agregar Proveedor</Button>
         </div>

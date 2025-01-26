@@ -21,7 +21,7 @@ const ScreeningModal: React.FC<ScreeningModalProps> = ({ isOpen, onClose, suppli
         onClick={onClose}
       />
 
-      <h4 className='text-lg'>Búsqueda de <span className="font-semibold italic">{supplier?.name}</span></h4>
+      <h4 className='text-lg mt-6 sm:mt-0'>Búsqueda de <span className="font-semibold italic">{supplier?.name}</span></h4>
       <p className='text-danger text-sm mb-3'>Resultados de la búsqueda en listas de alto riesgo</p>
 
       {

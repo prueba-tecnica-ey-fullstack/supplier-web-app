@@ -70,7 +70,7 @@ const SupplierForm: React.FC<SupplierFormProps> = ({ supplier, isOpen, onClose }
       <form
         onSubmit={handleSubmit}
         className="flex flex-col gap-2">
-        <div className="grid grid-cols-2 gap-2">
+        <div className="grid md:grid-cols-2 gap-2">
           <Input
             label="Nombre"
             name="name"
@@ -87,7 +87,7 @@ const SupplierForm: React.FC<SupplierFormProps> = ({ supplier, isOpen, onClose }
           />
         </div>
 
-        <div className="grid grid-cols-3 gap-2">
+        <div className="grid md:grid-cols-3 gap-2">
           <Input
             label="Identificación tributaria"
             name="taxIdentification"

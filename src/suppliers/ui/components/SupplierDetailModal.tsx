@@ -15,13 +15,13 @@ const SupplierDetailModal: React.FC<SupplierDetailModalProps> = ({ isOpen, onClo
         className='size-6 text-danger absolute right-5 cursor-pointer'
         onClick={onClose}
       />
-      <div className="space-y-6">
+      <div className="space-y-6 mt-8 sm:mt-0">
         <div className="text-center">
           <h4 className="text-xl font-bold text-gray-800 uppercase">Detalle del Proveedor</h4>
           <p className="text-sm text-gray-500">Información detallada del proveedor</p>
         </div>
 
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid md:grid-cols-2 gap-4">
           <div>
             <span className="block font-medium text-gray-700">ID</span>
             <span>{supplier?.id}</span>

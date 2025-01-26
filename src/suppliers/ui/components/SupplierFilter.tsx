@@ -42,8 +42,8 @@ const SupplierFilter: React.FC = () => {
         <form
           onSubmit={onSubmit}
         >
-          <div className='flex justify-between items-center gap-x-5'>
-            <label className='flex-1'>
+          <div className='md:flex justify-between items-center gap-x-5'>
+            <label className='flex-1 w-full inline-block mb-4 md:mb-0 md:inline'>
               <span className="text-sm font-semibold text-primary">Filtro</span>
               <input
                 name='value'
@@ -53,7 +53,7 @@ const SupplierFilter: React.FC = () => {
               />
             </label>
 
-            <label className='min-w-[300px]'>
+            <label className='w-full md:w-auto md:min-w-[300px] inline-block md:inline'>
               <span className="text-sm font-semibold text-primary">Columnas</span>
               <select
                 name='key'

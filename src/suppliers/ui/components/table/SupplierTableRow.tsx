@@ -28,7 +28,7 @@ const SupplierTableRow: React.FC<SupplierTableRowProps> = ({ supplier, onSelectS
         })
       }
       <td>
-        <div className='grid grid-cols-4 gap-2'>
+        <div className='grid grid-cols-2 md:grid-cols-4 gap-2'>
           <EyeIcon
             title='Ver detalle proveedor'
             className='size-5 cursor-pointer hover:text-primary'
